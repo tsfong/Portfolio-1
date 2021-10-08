@@ -5,7 +5,7 @@
 |  Day | Deliverable | Status
 |---|---| ---|
 |Day 1| Project Description | Incomplete
-|Day 1| Wireframes / Priority Matrix / Timeline | Complete
+|Day 1| Wireframes / Priority Matrix / Timeline | Incomplete
 |Day 2| Core Application Structure (HTML, CSS, etc.) | Incomplete
 |Day 3| MVP (Oracle Cards)| Incomplete
 |Day 4 & 5| MVP & Bug Fixes| Incomplete
@@ -33,7 +33,6 @@ For the basic skeleton, editing, layouts, animation, and game logic, I'm looking
 #### MVP
 
 - Create playable Oracle Card game 
-- (Maybe) Pull data from an api I'll find
 - Flex/CSS Layouts
 - Make sure all aspects of the page loads correctly
 - Make sure interactive content works
