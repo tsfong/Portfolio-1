@@ -21,6 +21,7 @@ TBD
 I created some mock-ups of what my portfolio website will eventually look like... and I'm 80% sure I'll be changing this by the time we get to my end-product. But here's a rough draft! 
 
 - [Mobile](https://imgur.com/YSZnNxd)
+- [Tablet](https://imgur.com/v9KmAmT)
 - [Desktop](https://imgur.com/q1TRXPa)
 
 ## Time/Priority Matrix 
