@@ -1,15 +1,16 @@
-# Project Overview
+# My Project Overview
 
 ## Project Schedule
 
 |  Day | Deliverable | Status
 |---|---| ---|
 |Day 1| Project Description | Incomplete
-|Day 1| Wireframes / Priority Matrix / Timeline | Incomplete
-|Day 3| Core Application Structure (HTML, CSS, etc.) | Incomplete
-|Day 4| MVP & Bug Fixes | Incomplete
-|Day 5| Final Touches | Incomplete
-|Day 6| Present | Incomplete
+|Day 1| Wireframes / Priority Matrix / Timeline | Complete
+|Day 2| Core Application Structure (HTML, CSS, etc.) | Incomplete
+|Day 3| MVP (Oracle Cards)| Incomplete
+|Day 4 & 5| MVP & Bug Fixes| Incomplete
+|Day 5| Beautify + Final Touches | Incomplete
+|Day 6| Present (DONE WOOHOO!) | Incomplete
 
 
 ## Project Description
@@ -30,8 +31,9 @@ For the basic skeleton, editing, layouts, animation, and game logic, I'm looking
 
 #### MVP
 
-- Playable Oracle card game 
-- Pull data from an api I'll find
+- Create playable Oracle Card game 
+- (Maybe) Pull data from an api I'll find
+- Flex/CSS Layouts
 - Make sure all aspects of the page loads correctly
 - Make sure interactive content works
 - Ensure links are correctly added
@@ -39,6 +41,7 @@ For the basic skeleton, editing, layouts, animation, and game logic, I'm looking
 #### PostMVP 
 
 - Readability is A1
+- Theme complete
 - Incorporate some kind of UI/UX design
 - Consistency in theme/aesthetics
 - Continue to beautify the pages
@@ -55,14 +58,13 @@ Being ambitious and including a fully-functional Oracle card game so that it's a
 | Project Previews | H | 4hr | hr |
 | Regular Nav Bar | H | 1.5hr | hr |  
 | Other sections | M | 4hr | hr|
-| Working with API | H | 3hrs|  hr | 
 | Contact/Social Media | M | 2hr |  hr |
-| Total | H | 20.5hrs| hrs |
+| Total | H | 17.5hrs| hrs |
 
 #### PostMVP
 | Component | Priority | Estimated Time | Actual Time |
 | --- | :---: |  :---: | :---: | 
-| Project Hover | L | 3hr | -hr | hr |
+| Project Catalogue | M | 3hr | -hr | hr |
 | Interactive Banner | M | 4hr | hr |
 | Materialize | H | 4hr | -hr | hr |
 | Bootstrap | H | 4hr | hr |
