@@ -16,78 +16,60 @@
 
 Use this section to describe your final project and perhaps any links to relevant sites that help convey the concept and\or functionality.
 
-## Wireframes
-
-Upload images of wireframe to cloudinary and add the link here with a description of the specific wireframe. Do not include the actual image and have it render on the page.  
+## My Wireframes
+I created some mock-ups of what my portfolio website will eventually look like. Wish me luck!
 
 - [Mobile](https://imgur.com/T7A4SrA)
 - [Desktop](https://imgur.com/SeV1A4c)
 
-Wireframing Resources:
-
-- [Mockflow](https://mockflow.com/app/#Wireframe)
-- [Figma](https://www.figma.com/)
-
-
 ## Time/Priority Matrix 
 
-[Link](https://res.cloudinary.com/jkeohan/image/upload/a_270/v1591621734/project1_matrix_ocy5gc_h1kg0m.jpg)
+[Link](https://imgur.com/OdLibY3)
 
-Include a full list of features that have been prioritized based on the `Time and Priority` Matix.  This involves drawing a a square.  In the middle of the square, on the x axis draw a line.  The most left part of the line should start with 0hrs and the end of the line should include 2hrs.  This line will be used to estimate how much time any one feature will take to complete. 
+For the basic skeleton, editing, layouts, animation, and game logic, I'm looking at an estimated 10 hours. However, I'm sure with the debugging and fluctuations in willpower, we'll see the final total hours that it takes for this project. 
 
-Now draw a vertical line on the y axis.  The top of this line should have `High` and the bottom `Low`.  This line will be used to assign a priority to to each feature you wish to include in the project.  
+#### MVP
 
-Now create a separate list starting with A and assign it one of the features.  Continue to assign each feature a letter.  Once complete add each letter to the matrix assigning based on what your feel it's prioirty is an how long it will take to implement. If any one feature takes longer than 2hrs to complete than break it down into smaller tasks and reassign them a new letter. 
-
-Once complete tally up the time and determine how long the project will take to complete. Now break those features into MVP and PostMVP so you can guarantee you will have a fully functioning project to demo. 
-
-### MVP/PostMVP - 5min
-
-The functionality will then be divided into two separate lists: MPV and PostMVP.  Carefully decided what is placed into your MVP as the client will expect this functionality to be implemented upon project completion.  
-
-#### MVP (examples)
-
-- Pull data using google json api
-- Render data on page 
-- Allow user to choose favorites 
-- Save their choices in firebase
+- Playable Oracle card game 
+- Pull data from an api I'll find
+- Make sure page loads
+- Make sure interactive content works
+- Ensure links are correctly added
 
 #### PostMVP 
 
-- Anything else that is not MVP
+- Readability is A1
+- Incorporate some kind of UI/UX design
+- No spelling mistakes
+- Continue to beautify the pages
 
-## Functional Components
+## Functional Components (Oracle Cards)
 
-Based on the initial logic defined in the previous sections try and breakdown the logic further into smaller components.  Try and capture what logic would need to be defined if the game was broken down into the following categories.
-
-Time frames are also key in the development cycle.  You have limited time to code all phases of the portfolio. Your estimates can then be used to evalute possibilities based on time needed and the actual time you have before the portfolio must be submitted. It's always best to pad the time by a few hours so that you account for the unknown so add and additional hour or two to each component to play it safe.
+Being ambitious and including a fully-functional Oracle card game so that it's a fun bonus accessory to my website. I think it'l show my extra flair, also I really like games. Oracle cards are for self-reflection and it's completely up to the person to interpret it how they'd like. I think the staying on the theme of self-reflection and playfulness is a great thing to incorporate into my portfolio. It adds a bit of "me" flair.
 
 #### MVP
 | Component | Priority | Estimated Time | Actual Time |
 | --- | :---: |  :---: | :---: | 
 | Hamburger | H | 1hr | hr |
-| Project Previews | H | 3hr | hr |
-| Regular Nav | H | 1hr | hr |  
-| Adding Form | H | 1.5hr|  hr | 
+| Project Previews | H | 4hr | hr |
+| Regular Nav Bar | H | 1.5hr | hr |  
 | Other sections and flex| M | 3hr | hr|
 | Working with API | H | 3hrs|  hr | 
-| Responsive | H | 3hr | hr | hr |
-| Social Media Icons | L | 1hr |  hr |
-| Total | H | 15.5hrs| hrs |
+| Oracle Card Game | H | 4hr | hr | hr |
+| Contact/Social Media | M | 1hr |  hr |
+| Total | H | 17.5hrs| hrs |
 
 #### PostMVP
 | Component | Priority | Estimated Time | Actual Time |
 | --- | :---: |  :---: | :---: | 
 | Project Hover | L | 3hr | -hr | hr |
-| Banner letters wiggle | L | 1hr | hr |
 | Interactive Banner | M | 4hr | hr |
 | Materialize | H | 4hr | -hr | hr |
 | Bootstrap | H | 4hr | hr |
-| Make own icon | L | 4hr | hr |
-| Total | H | 20hrs| hrs |
+| Total | H | 15hrs| hrs |
 
 ## Additional Libraries
- Use this section to list all supporting libraries and thier role in the project. 
+ Use this section to list all supporting libraries and their role in the project. 
 
 ## Code Snippet
 
