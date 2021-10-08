@@ -20,8 +20,8 @@ TBD
 ## My Wireframes
 I created some mock-ups of what my portfolio website will eventually look like... and I'm 80% sure I'll be changing this by the time we get to my end-product. But here's a rough draft! 
 
-- [Mobile](https://imgur.com/T7A4SrA)
-- [Desktop](https://imgur.com/SeV1A4c)
+- [Mobile](https://imgur.com/YSZnNxd)
+- [Desktop](https://imgur.com/q1TRXPa)
 
 ## Time/Priority Matrix 
 
