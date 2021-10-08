@@ -14,10 +14,10 @@
 
 ## Project Description
 
-Use this section to describe your final project and perhaps any links to relevant sites that help convey the concept and\or functionality.
+TBD
 
 ## My Wireframes
-I created some mock-ups of what my portfolio website will eventually look like. Wish me luck!
+I created some mock-ups of what my portfolio website will eventually look like... and I'm 80% sure I'll be changing this by the time we get to my end-product. But here's a rough draft! 
 
 - [Mobile](https://imgur.com/T7A4SrA)
 - [Desktop](https://imgur.com/SeV1A4c)
@@ -32,7 +32,7 @@ For the basic skeleton, editing, layouts, animation, and game logic, I'm looking
 
 - Playable Oracle card game 
 - Pull data from an api I'll find
-- Make sure page loads
+- Make sure all aspects of the page loads correctly
 - Make sure interactive content works
 - Ensure links are correctly added
 
@@ -40,7 +40,7 @@ For the basic skeleton, editing, layouts, animation, and game logic, I'm looking
 
 - Readability is A1
 - Incorporate some kind of UI/UX design
-- No spelling mistakes
+- Consistency in theme/aesthetics
 - Continue to beautify the pages
 
 ## Functional Components (Oracle Cards)
@@ -51,13 +51,13 @@ Being ambitious and including a fully-functional Oracle card game so that it's a
 | Component | Priority | Estimated Time | Actual Time |
 | --- | :---: |  :---: | :---: | 
 | Hamburger | H | 1hr | hr |
+| Oracle Card Game | H | 4hr | hr | hr |
 | Project Previews | H | 4hr | hr |
 | Regular Nav Bar | H | 1.5hr | hr |  
-| Other sections and flex| M | 3hr | hr|
+| Other sections | M | 4hr | hr|
 | Working with API | H | 3hrs|  hr | 
-| Oracle Card Game | H | 4hr | hr | hr |
-| Contact/Social Media | M | 1hr |  hr |
-| Total | H | 17.5hrs| hrs |
+| Contact/Social Media | M | 2hr |  hr |
+| Total | H | 20.5hrs| hrs |
 
 #### PostMVP
 | Component | Priority | Estimated Time | Actual Time |
@@ -66,10 +66,11 @@ Being ambitious and including a fully-functional Oracle card game so that it's a
 | Interactive Banner | M | 4hr | hr |
 | Materialize | H | 4hr | -hr | hr |
 | Bootstrap | H | 4hr | hr |
-| Total | H | 15hrs| hrs |
+| Beautify Page | M | 3hr | hr |
+| Total | H | 18hrs| hrs |
 
 ## Additional Libraries
- Use this section to list all supporting libraries and their role in the project. 
+ TBD
 
 ## Code Snippet
 
