@@ -1,0 +1,26 @@
+main {
+    display: flex;
+    flex-wrap: wrap;
+    font-family: "The Girl Next Door", sans-serif;
+}
+
+.new-card {
+   width: 200px;
+   height: 200px;
+   background-color: darkred;
+   margin: 15px;
+} 
+
+h3 {
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    padding-top: 60px;
+}
+
+.oracle-cards {
+    width: 250px;
+    height: 373px;
+    margin: 10px;
+    background-size: cover;
+}

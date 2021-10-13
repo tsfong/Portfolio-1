@@ -1,0 +1,109 @@
+body {
+  margin: 0;
+  font-size: 20px;
+  font-family: "The Girl Next Door", sans-serif;
+  
+}
+
+#cover-section {
+  height: 80vh;
+  background:white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin: 0;    
+}
+#cover-section header {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.carousel-header {
+  text-align: center;
+  color: white;
+  background-color: #110151;
+  padding: 40px
+}
+.carousel-item {
+  border: solid white;
+  border-width: 15px;
+  background-color: #110151;
+  height: 65vh;
+  min-height: 350px;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.carousel-control-next-icon {
+  background-color: black;
+}
+.carousel-control-prev-icon {
+  background-color: black;
+}
+hr  {  
+width: 30%;  
+height: 6px;  
+background-color: white;  
+margin-bottom: 15px;  
+margin-right: auto;  
+margin-left: auto;  
+margin-top: 10px;  
+border-width: 4px;  
+}  
+.navbar-brand {
+    display: block;
+    height: 50px;
+    width: 50px;
+}
+
+#about-me {
+  background-color: #80F0EC;
+  padding: 50px;
+  border-width:medium;
+  border: solid white;
+}
+
+#about-me .about-me-text {
+  padding: 10px 20px 10px 20px;
+}
+
+.about-me-header {
+  text-align: center;
+  font-weight: 600;
+  padding: 10px;
+
+}
+
+.card-game-header {
+  text-align: center;
+  font-weight: 600;
+  padding-top: 40px;
+}
+
+.card-line {
+  background-color: black;
+}
+
+#contact-section {
+  text-align: center;
+  border: 3px;
+  border-color: black;
+  padding: 30px;
+  letter-spacing: 3px;
+}
+
+
+
+#title{
+  color: black;
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+#cover-subtext {
+  color: rgb(112, 105, 105);
+  font-size: 2em;
+  margin-top: 0px;
+}
