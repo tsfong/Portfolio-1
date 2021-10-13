@@ -22,7 +22,7 @@ const cards = [
   const $h3 = $('<h3>');
 
 //h3 text
-  $h3.text('Pull A Fortune Card');
+  $h3.text('Pull 7 Fortune Cards');
 
 //append h3 tag to div
   $newCard.append($h3);
@@ -57,4 +57,3 @@ const $oracleCards = $('<div>');
     randomCard()
 });
 
-  
