@@ -19,6 +19,8 @@ body {
   #cover-section {
     height: 80vh;
     background:black;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(13, 0, 37));
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -44,6 +46,8 @@ body {
     text-align: center;
     color: white;
     background-color: #110151;
+    background-image: linear-gradient(to bottom, rgba(65, 1, 117, 0), rgb(37, 4, 90));
+
     padding: 40px
   }
   .carousel-item {
@@ -78,6 +82,7 @@ body {
   
   #about-me {
     background-color: #110151;
+    background-image: linear-gradient(to bottom, rgba(84, 3, 150, 0), rgb(39, 0, 145));
     color: white;
     padding: 50px;
     border-width:medium;
@@ -108,6 +113,7 @@ body {
   
   #contact-section {
     background-color: #110151;
+    background-image: linear-gradient(to bottom, rgba(84, 3, 150, 0), rgb(39, 0, 145));
     color: white;
     text-align: center;
     border: 3px;
