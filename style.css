@@ -246,7 +246,7 @@ body {
   #mobile-about-me-text {
       display: none;
   }
-  #email a:link {
+  a#email:link  {
     color: white;
     text-decoration: none;
   }
@@ -255,7 +255,7 @@ body {
     color: black;
   }
   
-  a:hover {
+  a#email:hover {
     color: #80f0ec;
   }
   
