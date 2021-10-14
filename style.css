@@ -263,7 +263,7 @@ body {
     display: none;
 }
 
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 500px) {
     .new-card {
         display: none;
     }
@@ -277,6 +277,12 @@ body {
     #container {
         display: none;
     }
+    h1.tablet-card-header {
+      display: none;
+  }
+  h2.tablet-card-header-subtext {
+      display: none;
+  }
     .mobile-card-header {
         color: red;
         display: grid;
@@ -301,12 +307,6 @@ body {
     #cover-subtext {
         font-size: 30px;
     }
-    .tablet-card-header {
-      display: none;
-  }
-  .tablet-card-header-subtext {
-      display: none;
-  }
   
 }
 @media only screen and (max-width: 1030px) {
