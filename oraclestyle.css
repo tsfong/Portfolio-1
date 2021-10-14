@@ -3,12 +3,14 @@ main {
     flex-wrap: wrap;
     font-family: "The Girl Next Door", sans-serif;
     padding: 30px;
+    background-image: url("wallpaper2you_321049.jpeg");
+    background-size: 100%;
 }
 
 .new-card {
    width: 200px;
    height: 298px;
-   background-color: #5c5b5b;
+   background-color: #15035f;
    margin: 10px;
 } 
 

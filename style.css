@@ -3,6 +3,11 @@ body {
     font-size: 20px;
     font-family: "The Girl Next Door", sans-serif;
     
+  } 
+  .navbar-brand {
+      display: block;
+      height: 50px;
+      width: 50px;
   }
   #container {
     position: absolute;
@@ -13,12 +18,22 @@ body {
   
   #cover-section {
     height: 80vh;
-    background:white;
+    background:black;
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
     margin: 0;    
+  } 
+  #title{
+    color: white;
+    font-size: 3em;
+    margin-bottom: 10px;
+  }
+  #cover-subtext {
+    color: #39248d;
+    font-size: 2em;
+    margin-top: 0px;
   }
   #cover-section header {
     padding-left: 15px;
@@ -59,11 +74,7 @@ body {
   margin-top: 10px;  
   border-width: 4px;  
   }  
-  .navbar-brand {
-      display: block;
-      height: 50px;
-      width: 50px;
-  }
+ 
   
   #about-me {
     background-color: #110151;
@@ -73,8 +84,9 @@ body {
     border: solid white;
   }
   
-  #about-me .about-me-text {
+  #about-me #about-me-text {
     padding: 10px 20px 10px 20px;
+    text-align: center;
   }
   
   .about-me-header {
@@ -103,18 +115,128 @@ body {
     padding: 30px;
     letter-spacing: 3px;
   }
+  .center {
+    background-color: black;
+    display: table;
+    width: 100%;
+    height: 10vh;
+  }
+  .social-header {
+      color: white;
+      text-align: center;
+      padding: 10px
+  }
   
-  #title{
-    color: black;
-    font-size: 3em;
-    margin-bottom: 10px;
+  #social {
+    display: table-cell;
+    vertical-align: middle;
+    padding-bottom: 20px;
   }
-  #cover-subtext {
-    color: rgb(112, 105, 105);
-    font-size: 2em;
-    margin-top: 0px;
+  
+  #social ul {
+    text-align: center;
+    padding-left: 0px;
+    margin: 0 auto;
   }
-
+  
+  #social li {
+    display: inline-block;
+    list-style-type: none;
+  }
+  
+  /** Facebook **/
+  
+  .facebook {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .facebook .border {
+    background: transparent;
+    outline: none;
+    color:rgba(255,255,255, 0.3);
+    width: 50px;
+    height: 50px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    border-radius: 100px;
+    border: 2px solid rgba(255,255,255, 0.3);
+    transition: all .2s ease-in-out;
+  }
+  
+  .facebook .border:hover {
+    background: #3b5998;
+    border-color: #436aaf;
+    color: rgba(255,255,255, 0.9);
+    transform: scale(1.2);
+  }
+  
+  .fa.fa-facebook {
+    font-size: 25px;
+  }
+  
+  /** Twitter **/
+  
+  .twitter {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .twitter .border {
+    background: transparent;
+    outline: none;
+    color:rgba(255,255,255, 0.3);
+    width: 50px;
+    height: 50px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    border-radius: 100px;
+    border: 2px solid rgba(255,255,255, 0.3);
+    transition: all .2s ease-in-out;
+  }
+  
+  .twitter .border:hover {
+    background: #00aced;
+    border-color: #72c6e6;
+    color: rgba(255,255,255, 0.9);
+    transform: scale(1.2);
+  }
+  
+  .fa.fa-twitter {
+    font-size: 25px;
+  }
+  
+  /** Instagram **/
+  
+  .instagram {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .instagram .border {
+    background: transparent;
+    outline: none;
+    color:rgba(255,255,255, 0.3);
+    width: 50px;
+    height: 50px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    border-radius: 100px;
+    border: 2px solid rgba(255,255,255, 0.3);
+    transition: all .2s ease-in-out;
+  }
+  
+  .instagram .border:hover {
+    background: #517fa4;
+    border-color: #7495af;
+    color: rgba(255,255,255, 0.9);
+    transform: scale(1.2);
+  }
+  
+  .fa.fa-instagram {
+    font-size: 25px;
+  }
+  
   .mobile-card-header {
       display: none;
   }
@@ -140,6 +262,12 @@ body {
   a:active {
     color: #80f0ec;
   }
+  .tablet-card-header {
+    display: none;
+}
+.tablet-card-header-subtext {
+    display: none;
+}
 
   @media only screen and (max-width: 600px) {
     .new-card {
@@ -170,5 +298,52 @@ body {
     }
     #about-me-text {
         display: none;
+    }
+    #title {
+        font-size: 40px;
+        display: grid;
+        text-align: center;
+    }
+    #cover-subtext {
+        font-size: 30px;
+    }
+}
+@media only screen and (max-width: 1030px) {
+    .new-card {
+        display: none;
+    }
+    .card-game-header {
+        display: none;
+    }
+    h1 {
+        display: flex;
+        text-align: center;
+    }
+    #container {
+        display: none;
+    }
+    .tablet-card-header {
+        color: red;
+        display: grid;
+        text-align: center;
+        padding: 15px;
+    }
+    .tablet-card-header-subtext {
+        display: grid;
+        text-align: center;
+    }
+    #mobile-about-me-text {
+        display: flex;
+    }
+    #about-me-text {
+        display: none;
+    }
+    #title {
+        font-size: 70px;
+        display: grid;
+        text-align: center;
+    }
+    #cover-subtext {
+        font-size: 40px;
     }
 }

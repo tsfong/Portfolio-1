@@ -1,12 +1,13 @@
 const cards = [
-    'chinese-fortune-reading-cards-14952.png',
-    'chinese-fortune-reading-cards-14953.png',
-    'chinese-fortune-reading-cards-14954.png',
-    'chinese-fortune-reading-cards-14955.png',
-    'chinese-fortune-reading-cards-14956.png',
-    'chinese-fortune-reading-cards-14957.png',
-    'chinese-fortune-reading-cards-14958.png',
-    'chinese-fortune-reading-cards-14959.png',
+    'clair-de-lune-lenormand-14152.jpeg',
+    'clair-de-lune-lenormand-14153.jpeg',
+    'clair-de-lune-lenormand-14154.jpeg',
+    'clair-de-lune-lenormand-14155.jpeg',
+    'clair-de-lune-lenormand-14156.jpeg',
+    'clair-de-lune-lenormand-14157.jpeg',
+    'clair-de-lune-lenormand-14158.jpeg',
+    'clair-de-lune-lenormand-14159.jpeg',
+    'clair-de-lune-lenormand-14160.jpeg',
   ];
 
 //create a div for the new card
@@ -22,7 +23,7 @@ const cards = [
   const $h3 = $('<h3>');
 
 //h3 text
-  $h3.text('Pull 7 Fortune Cards');
+  $h3.text('Pull 7 Oracle Cards');
 
 //append h3 tag to div
   $newCard.append($h3);
