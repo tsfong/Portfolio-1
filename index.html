@@ -1,1 +1,287 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF"
+      crossorigin="anonymous"
+    />
+    <script
+  src="http://code.jquery.com/jquery-3.5.1.js"
+  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+  crossorigin="anonymous" defer></script>
+  <script src="oraclescript.js" defer></script>
+  <link rel="stylesheet" href="oraclestyle.css">
+
+</head>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=The+Girl+Next+Door&display=swap" rel="stylesheet">
+
+  </head>
+  <body>
+    <!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light static-top">
+  <div class="container">
+    <a class="navbar-brand" href="https://imgur.com/XQaWyUe">
+      <img src="images /tf-logo.png" alt="pic" height = "40" width = "40">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#about-me">About Me</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Projects
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="Matchmaker/matchmaker.html">HTML/CSS Layouts</a></li>
+            <li><a class="dropdown-item" href="fashion-blog/index.html">CSS Grid</a></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item" href="Stoplight/index.html">JavaScript</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div>
+  <div id="container" touch-action="none"></div>
+  <script src="animated.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/88/three.min.js"></script>
+  <script id="vertexShader" type="x-shader/x-vertex">
+      void main() {
+          gl_Position = vec4( position, 1.0 );
+      }
+  </script>
+  <script id="fragmentShader" type="x-shader/x-fragment">
+    uniform vec2 u_resolution;
+    uniform vec2 u_mouse;
+    uniform float u_time;
+    uniform sampler2D u_noise;
+    uniform sampler2D u_buffer;
+    uniform bool u_renderpass;
+      
+    const float blurMultiplier = 0.95;
+    const float circleSize = .25;
+    const float blurStrength = .98;
+    const float threshold = .5;
+    const float scale = 4.;
+    
+    #define _fract true
+    
+    #define PI 3.141592653589793
+    #define TAU 6.283185307179586
+  
+    vec2 hash2(vec2 p)
+    {
+      vec2 o = texture2D( u_noise, (p+0.5)/256.0, -100.0 ).xy;
+      return o;
+    }
+    
+    vec3 hsb2rgb( in vec3 c ){
+      vec3 rgb = clamp(abs(mod(c.x*6.0+vec3(0.0,4.0,2.0),
+                               6.0)-3.0)-1.0,
+                       0.0,
+                       1.0 );
+      rgb = rgb*rgb*(6.0-2.0*rgb);
+      return c.z * mix( vec3(1.0), rgb, c.y);
+    }
+    
+    vec3 domain(vec2 z){
+      return vec3(hsb2rgb(vec3(atan(z.y,z.x)/TAU,1.,1.)));
+    }
+    vec3 colour(vec2 z) {
+        return domain(z);
+    }
+  
+    
+  #define pow2(x) (x * x)
+  
+  const int samples = 8;
+  const float sigma = float(samples) * 0.25;
+  
+  float gaussian(vec2 i) {
+      return 1.0 / (2.0 * PI * pow2(sigma)) * exp(-((pow2(i.x) + pow2(i.y)) / (2.0 * pow2(sigma))));
+  }
+  
+  vec3 hash33(vec3 p){ 
+      
+      float n = sin(dot(p, vec3(7, 157, 113)));    
+      return fract(vec3(2097152, 262144, 32768)*n); 
+  }
+  
+  vec3 blur(sampler2D sp, vec2 uv, vec2 scale) {
+      vec3 col = vec3(0.0);
+      float accum = 0.0;
+      float weight;
+      vec2 offset;
+      
+      for (int x = -samples / 2; x < samples / 2; ++x) {
+          for (int y = -samples / 2; y < samples / 2; ++y) {
+              offset = vec2(x, y);
+              weight = gaussian(offset);
+              col += texture2D(sp, uv + scale * offset).rgb * weight;
+              accum += weight;
+          }
+      }
+      
+      return col / accum;
+  }
+    void main() {
+      vec2 uv = (gl_FragCoord.xy - 0.5 * u_resolution.xy) / u_resolution.y;
+      uv *= scale;
+      vec2 mouse = u_mouse * scale;
+      
+      vec2 ps = vec2(1.0) / u_resolution.xy;
+      vec2 sample = gl_FragCoord.xy / u_resolution.xy;
+      vec2 o = mouse*.2+vec2(.65, .5);
+      float d = .98;
+      sample = d * (sample - o);
+      sample += o;
+      sample += vec2(sin((u_time+uv.y * .5)*10.)*.001, -.00);
+      
+      vec3 fragcolour;
+      vec4 tex;
+      if(u_renderpass) {
+        tex = vec4(blur(u_buffer, sample, ps*blurStrength) * blurMultiplier, 1.);
+        float df = length(mouse - uv);
+        fragcolour = vec3( smoothstep( circleSize, 0., df ) );
+      } else {
+        tex = texture2D(u_buffer, sample, 2.) * .98;
+        tex = vec4(
+          smoothstep(0.0, threshold - fwidth(tex.x), tex.x),
+          smoothstep(0.2, threshold - fwidth(tex.y) + .2, tex.y),
+          smoothstep(-0.05, threshold - fwidth(tex.z) - .2, tex.z),
+          1.);
+        vec3 n = hash33(vec3(uv, u_time*.1));
+        tex.rgb += n * .2 - .1;
+        // tex = vec4(
+        //   smoothstep(0.0, threshold - fwidth(tex.x), tex.x),
+        //   smoothstep(0.2, threshold - fwidth(tex.x) + .2, tex.x),
+        //   smoothstep(-0.05, threshold - fwidth(tex.x) - .2, tex.x),
+        //   1.);
+      }
+      // vec4 tex = texture2D(u_buffer, sample, 2.) * .98;
+      
+      
+  
+      gl_FragColor = vec4(fragcolour,1.0);
+      gl_FragColor += tex;
+      
+    }
+  </script> 
+
+<!-- Page Content -->
+<section id="cover-section">
+  <header>
+      <h1 id="title">Hi! I'm Tiffany.</h1>
+      <p id="cover-subtext">(software engineer in the making) </p>
+  </header>
+</section>
+  
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+  <h2 class = carousel-header>My Projects</h2>
+
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active" style="background-image: url('images /matchmaker.png')">
+      <div class="carousel-caption">
+      </div>
+    </div>
+    <div class="carousel-item" style="background-image: url('images /fashion-blog.png')">
+      <div class="carousel-caption">
+        
+      </div>
+    </div>
+    <div class="carousel-item" style="background-image: url('images /stoplight.png')">
+      <div class="carousel-caption">
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+      <!-- ABOUT ME SECTION-->
+    </div>
+    <div id = "about-me">
+      <h2 class = "about-me-header">About Me</h2>
+      <hr size="10px" width="1000px" color="grey">  
+      <p id="about-me-text">
+        Hi there! Thanks for visiting my page. I'm a 23 year old starting a new chapter of my life, or more like going back and continuing where I left off. I've always been aspiring to be in CS but I took a detour in education. I held onto my interests and combined them in order to become a STEM teacher working for nonprofits and private education companies. I then stepped up and went into administration, where I handled
+        managing one hundred teachers, created my own STEM curriculum, and continued into HR. However, I felt like it was time to pick up where I left off in computer science and decided to leave my comfortable job to pursue my original passion. I love having the freedom to create, design, and implement ideas that come into mind.
+        I'm young, hungry, and 100% ready to take this new role on. I'm here to shape and create the future of my dreams that I put on hold four years ago.
+        The way I see the beauty of coding is verbalized by Fredrick Brooks Jr. who wrote "The programmer, like the poet, works only slightly removed from pure thought-stuff. He builds his castles in the air, from air, creating by exertion of the imagination."
+    </p>
+    <p id="mobile-about-me-text">
+      Hi there! Thanks for visiting my page. I'm a 23 year old starting a new chapter of my life, or more like going back and continuing where I left off. I'm here to shape and create the future of my dreams that I put on hold four years ago.
+      The way I see the beauty of coding is verbalized by Fredrick Brooks Jr. who wrote "The programmer, like the poet, works only slightly removed from pure thought-stuff. He builds his castles in the air, from air, creating by exertion of the imagination."
+  </p>
+    </div>
+    <div id = "card-game">      
+      <h2 class = "card-game-header" href = "">Let's Play: Oracle Cards</h2>
+      <hr class = "card-line" size="10px" width="1000px" color="grey">
+      <h1 class = "mobile-card-header">There's no room!</h1>
+      <h2 class = "mobile-card-header-subtext">Please expand your screen to play Oracle Cards.</h2>
+      <h1 class = "tablet-card-header">If only...</h1>
+      <h2 class = "tablet-card-header-subtext">We can ALMOST play Oracle Cards, still a little small.</h2>
+    </div>
+    </div>
+    <main>
+      <!-- CARD GAME -->
+    </main>
+    <div id = "contact-section">
+      <h2 class = "contact-header">Don't Be Shy! SAY HELLO.</h2>
+            <a id="email" href="mailto: tiffanysfong@yahoo.com">Email: tiffanysfong@yahoo.com</a>
+    </div>
+
+    <!-- FOOTER/SOCIAL MEDIA -->
+<div class="center">
+<div id="social">    
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <h2 class = "social-header">Social Media</h2>
+  <ul>
+    <li class="facebook">
+      <button class="border"><i class="fa fa-facebook"></i></button>
+    </li>
+
+    <li class="twitter">
+      <button class="border"><i class="fa fa-twitter"></i></button>
+    </li>
+
+    <li class="instagram">
+      <button class="border"><i class="fa fa-instagram"></i></button>
+    </li>
+  </ul>
+</div>
+  </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

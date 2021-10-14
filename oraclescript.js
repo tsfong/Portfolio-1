@@ -1,13 +1,13 @@
 const cards = [
-    'clair-de-lune-lenormand-14152.jpeg',
-    'clair-de-lune-lenormand-14153.jpeg',
-    'clair-de-lune-lenormand-14154.jpeg',
-    'clair-de-lune-lenormand-14155.jpeg',
-    'clair-de-lune-lenormand-14156.jpeg',
-    'clair-de-lune-lenormand-14157.jpeg',
-    'clair-de-lune-lenormand-14158.jpeg',
-    'clair-de-lune-lenormand-14159.jpeg',
-    'clair-de-lune-lenormand-14160.jpeg',
+    'cards/clair-de-lune-lenormand-14152.jpeg',
+    'cards/clair-de-lune-lenormand-14153.jpeg',
+    'cards/clair-de-lune-lenormand-14154.jpeg',
+    'cards/clair-de-lune-lenormand-14155.jpeg',
+    'cards/clair-de-lune-lenormand-14156.jpeg',
+    'cards/clair-de-lune-lenormand-14157.jpeg',
+    'cards/clair-de-lune-lenormand-14158.jpeg',
+    'cards/clair-de-lune-lenormand-14159.jpeg',
+    'cards/clair-de-lune-lenormand-14160.jpeg',
   ];
 
 //create a div for the new card

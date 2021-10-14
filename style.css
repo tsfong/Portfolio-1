@@ -246,7 +246,7 @@ body {
   #mobile-about-me-text {
       display: none;
   }
-  a:link {
+  #email a:link {
     color: white;
     text-decoration: none;
   }
