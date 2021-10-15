@@ -23,7 +23,7 @@ const cards = [
   const $h3 = $('<h3>');
 
 //h3 text
-  $h3.text('Pull 7 Oracle Cards');
+  $h3.text('Pull 6 Oracle Cards');
 
 //append h3 tag to div
   $newCard.append($h3);
@@ -48,7 +48,6 @@ const $oracleCards = $('<div>');
 
     $oracleCards.css('background-image', `url(${cards[index]})`);
   }
-
 //PLEASE WORK!
 
   $newCard.on('click', 
@@ -57,4 +56,6 @@ const $oracleCards = $('<div>');
 
     randomCard()
 });
+
+
 
