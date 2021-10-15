@@ -350,6 +350,9 @@ body {
     #about-me-text {
         display: none;
     }
+    #mobile-about-me-text {
+      display: none;
+  }
     #title {
         font-size: 70px;
         display: grid;
