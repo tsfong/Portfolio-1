@@ -82,11 +82,12 @@ Being ambitious and including a fully-functional Oracle card game so that it's a
 | Component | Priority | Estimated Time | Actual Time |
 | --- | :---: |  :---: | :---: | 
 | Project Catalogue | M | 3hr | 2hr |
+| (Optional) Flip Card Style | M | 3hr | 3hr |
 | Interactive Banner | M | 4hr | 3hr |
 | Materialize | H | 4hr | 4hr |
 | Bootstrap | H | 3hr | 3hr |
 | Beautify Page | M | 3hr | 4hr |
-| Total | H | 17hrs| 17hrs |
+| Total | H | 20hrs| 20hrs |
 
 ## Additional Libraries
 Animated Wallpaper: https://cdnjs.cloudflare.com/ajax/libs/three.js/88/three.min.js
@@ -167,6 +168,19 @@ I had some problems because I had created separate javascript/css files. Then I 
 
 I also fell into a rabbit hole where I wasted a lot of time working with SASS/SCSS... I spent hours trying to work and implement and use cool effects on my page to really WOW my viewer. At the end of the day, I didn't end up using any of these and so I semi-wasted my time. However, at least I know how to merge these files in my Terminal if i ever want to implement it into my future projects.
 
-#### SAMPLE.....
-**ERROR**: app.js:34 Uncaught SyntaxError: Unexpected identifier                                
-**RESOLUTION**: Missing comma after first object in sources {} object
+On the final work day, I tried to do a flip-style for the Oracle Cards but after 3 hours of it not working, I decided to just give up for now. I'll probably go back to it later because I'd want to figure it out but I think I started getting overwhelmed after trying so many different techniques. It probably isn't as complex but I started going down a rabbit hole.
+
+## SAMPLE
+
+My Oracle Card game wasn't working in my deployed version but thankfully Jason helped me out and told me that there in fact, is a DIFFERENCE between http and https when you include it in your HTML. 
+
+Originally when I had simply "http//..." it was saying that it was an insecure link.  Definitely handy to know because I was close to going crazy haha...
+
+```
+<script
+  src="https://code.jquery.com/jquery-3.5.1.js"
+  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+  crossorigin="anonymous" defer></script>
+  <script src="oraclescript.js" defer></script>
+  <link rel="stylesheet" href="oraclestyle.css">
+```
