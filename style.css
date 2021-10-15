@@ -15,7 +15,6 @@ body {
     text-align: center;
     opacity: 0.1;
   }
-  
   #cover-section {
     height: 80vh;
     background:black;
@@ -57,9 +56,6 @@ body {
     height: 65vh;
     min-height: 350px;
     background: no-repeat center center scroll;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
     background-size: cover;
   }
   .carousel-control-next-icon {
@@ -68,6 +64,7 @@ body {
   .carousel-control-prev-icon {
     background-color: black;
   }
+
   hr  {  
   width: 30%;  
   height: 6px;  
@@ -77,9 +74,9 @@ body {
   margin-left: auto;  
   margin-top: 10px;  
   border-width: 4px;  
-  }  
- 
-  
+  } 
+
+
   #about-me {
     background-color: #110151;
     background-image: linear-gradient(to bottom, rgba(84, 3, 150, 0), rgb(39, 0, 145));
@@ -88,7 +85,7 @@ body {
     border-width:medium;
     border: solid white;
   }
-  
+
   #about-me #about-me-text {
     padding: 10px 20px 10px 20px;
     text-align: center;
@@ -121,6 +118,7 @@ body {
     padding: 30px;
     letter-spacing: 3px;
   }
+
   .center {
     background-color: black;
     display: table;
@@ -268,8 +266,11 @@ body {
 .tablet-card-header-subtext {
     display: none;
 }
+#tablet-about-me-text {
+  display: none;
+}
 
-  @media only screen and (max-width: 500px) {
+  @media only screen and (max-width: 500px) and (min-width: 300px) {
     .new-card {
         display: none;
     }
@@ -301,6 +302,7 @@ body {
     }
     #mobile-about-me-text {
         display: flex;
+        text-align: center;
     }
     #about-me-text {
         display: none;
@@ -313,9 +315,11 @@ body {
     #cover-subtext {
         font-size: 30px;
     }
-  
+    #tablet-about-me-text {
+      display: none;
+    }
 }
-@media only screen and (max-width: 1030px) {
+@media only screen and (min-width: 501px) and (max-width: 1030px) {
     .new-card {
         display: none;
     }
@@ -339,8 +343,9 @@ body {
         display: grid;
         text-align: center;
     }
-    #mobile-about-me-text {
+    #tablet-about-me-text {
         display: flex;
+        text-align: center;
     }
     #about-me-text {
         display: none;
