@@ -53,7 +53,7 @@ body {
     border: solid white;
     border-width: 15px;
     background-color: #110151;
-    height: 65vh;
+    height: 70vh;
     min-height: 350px;
     background: no-repeat center center scroll;
     background-size: cover;
@@ -177,14 +177,14 @@ body {
     font-size: 25px;
   }
   
-  /** Twitter **/
+  /** github **/
   
-  .twitter {
+  .github {
     width: 50px;
     height: 50px;
   }
   
-  .twitter .border {
+  .github .border {
     background: transparent;
     outline: none;
     color:rgba(255,255,255, 0.3);
@@ -195,14 +195,14 @@ body {
     transition: all .2s ease-in-out;
   }
   
-  .twitter .border:hover {
-    background: #00aced;
+  .github .border:hover {
+    background: #4b5254;
     border-color: #72c6e6;
     color: rgba(255,255,255, 0.9);
     transform: scale(1.2);
   }
   
-  .fa.fa-twitter {
+  .fa.fa-github {
     font-size: 25px;
   }
   
